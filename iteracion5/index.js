@@ -9,7 +9,9 @@ let countLenght = 0;
 function averageWord(elements) {
   for (let index = 0; index < elements.length; index++) {
     const element = elements[index];
-    if (typeof element === "number") {
+    if (typeof element === "string") {
+      countLenght += element.length;
+    } else if (typeof element === "number") {
       countLenght += element;
     }
   }
